@@ -1,0 +1,126 @@
+\documentclass{abrice}
+
+\title{Comp 549: Assignment 4}
+\author{Anthony Brice}
+
+\usepackage[style=nature,natbib=true,backend=biber]{biblatex}
+\addbibresource{hw.bib}
+
+\begin{document}
+\maketitle
+
+\section{Part 1}
+
+\subsection{The Radical Promise of the Multi-touch Interface, Han}
+
+Han seems to want to stress the creative applications for his multi-touch
+interface, but his demonstrations of those seem to me to get a little
+hand-wavey. I cannot imagine his touch-responsive lava lamp germinating into a
+desirable sculpting tool, and likewise his mesh-manipulation program seems to
+have limited utility.
+
+That being said, his demonstrations of practical applications such as the photo
+album app and the maps app are vastly more impressive (and judging from their
+reactions I think the audience would agree). When Apple introduced the iPhone in
+2007 they claimed to have invented multi-touch, but I find it hard to believe
+they were unaware of Han's research.
+
+\subsection{Free or Cheap Wii Remote Hacks, Lee}
+
+Lee's demonstrations are quite impressive. I like that he lets them speak for
+themselves, mostly avoiding descriptions of possible applications. I'll note
+that EA's \emph{Boom Blox} ended up removing the head-tracking feature he
+mentions in the talk, but Lee could hardly be blamed for that.
+
+\subsection{Cheap Wiimote Tabletop Touch Screen Display, Mui}
+
+Willow's improvement on Lee's design is also quite impressive. She presents a
+practical solution to a practical design problem with Lee's smart board. I
+imagine that in the current design it might take only a small amount of pressure
+to break the display's glass, but such issues should be pretty easy to work out
+in iterative designs. I especially liked the shout out to GNU's GIMP.
+
+\section{Part 2}
+
+\subsection{\emph{2001: A Space Odyssey}'s HAL 9000 as an Interactive System}
+
+HAL exists within a context in which he handles autonomously many ship functions,
+collaborates with the human crew to facilitate progress in the mission, and does
+so continuously even with a very long delay between communications with mission
+control on Earth. First and foremost, HAL is a life-critical system. He
+monitors and maintains the life functions of the crew in hibernation and seems
+to handle other life-critical ship functions such as the oxygen in the air, as
+evidenced by the fact that Bowman takes a moment to retrieve the helmet for his
+space suit before he begins to remove HAL's logic memory units.
+
+In addition to the above, HAL also contains elements of a social-technical
+system as evidenced by the following. HAL's current application state involved
+many people over a long period of time since it seems to persist since his
+birth-date of the twelfth of January, 1992. Security was surely a paramount
+concern to the users who entrusted HAL---and no other member of the crew---with
+information pertaining to contact with intelligent life on Earth's moon. Lastly
+HAL builds trust with his users by displaying emotion, an effect he is
+intentionally programmed to provide.
+
+HAL's users include the crew of the Discovery One, the support personnel on
+Earth with their own HAL 9000, those who provided HAL with instructions to
+conceal information from the rest of the crew and probe them to find if they had
+any suspicions, and perhaps even his ``instructor,'' Mr.~Langley, since HAL can
+remember interacting with him. In the worst case, HAL must work closely with
+users who will likely be fatigued, lonely, bored, and stressed.
+
+The most common task we see the crew perform in their interactions with HAL is
+the assessment of ship capabilities. Indeed the key mystery of the film's second
+act revolves around whether HAL is wrong (or even intentionally misleading) in
+his prediction that the ship component which provides communication with Earth
+will fail in seventy-two hours. The film also hints at many tasks performed by
+the crew with HAL of which they may not even be aware, such as providing HAL
+with information for his crew psychology report.
+
+Based on how much the film stresses the point and the palpable pride with which
+HAL proclaims it, I find it safe to assume that HAL was evaluated primarily
+for his inability to have ``made a mistake or distorted information.'' This
+would have reinforced another key point of evaluation for his developers: the
+ability to build trust with his users.
+
+Besides the obvious suggestion that HAL could be programmed to accept Asimov's
+Three Laws of Robotics, I can think of a few ways in which HAL might be
+improved. As related in~\cite{korsmeyer}, no real need exists for ``a completely
+autonomous system that could independently make decisions'' in deep space
+travel. The film itself makes a compelling argument that unpredictable decisions
+are totally undesirable when being made by a life-critical system. A computer
+could be made to automate many mundane tasks associated with space travel ``with
+the crew members controlling the locus of control and directing the activities
+of the mission.'' Assuming independent decision-making is required, it might
+have been desirable to allow input into HAL from a command language backdoor in
+addition to his natural language capabilities to remove any ambiguity inherent
+to natural language. The command language could have been used to override HAL's
+own decisions, and even to provide HAL with important concepts upon which many
+decisions are made, such as the mission priorities. (Clarke claims HAL went
+``mad'' due to the conflicting nature of those priorities. I find that
+explanation dissatisfying and I've tried to keep this analysis strictly to the
+film, but do note that priorities provided in a command language could have been
+easily checked at compile time for internal consistency.)
+
+This leads me to what I see as the most egregious flaw in HAL's design: that the
+interactive system should be personified to point that his users ``can[not]
+truthfully answer'' whether he has genuine emotions. By programming HAL to build
+trust, empathy, and camaraderie with his shipmates, the developers have made it
+all the more difficult to assess his operational fitness and, if necessary, take
+him offline. Early mistakes HAL makes, such as misstating his final move in his
+chess match with Poole, get overlooked where they would be much more noticeable
+coming from an inhuman machine. Similarly, the way Bowman breaks eye contact with
+the ship when HAL informs him that he read Poole's and Bowman's lips as well as
+Bowman's agitated breathing as he removes HAL's logic units betray Bowman's
+emotional response, his pangs of conscience, as he contemplated and then went
+about disconnecting HAL\@. In this respect HAL's design serves as a warning:
+Creating man in the machine is not a goal in and of itself, and the implications of
+which should weigh heavily on such creators.
+
+\printbibliography%
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

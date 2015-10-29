@@ -1,0 +1,86 @@
+\documentclass{abrice}
+
+\title{Comp 549: Project Proposal}
+\author{Anthony Brice}
+\date{\today\protect\\ \bigskip The Computer Algebra Tutor}
+\setcounter{secnumdepth}{2}
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Many high school- and college-age students face considerable difficulty taking
+their first serious mathematics courses due to the level of literacy required in
+both basic algebra syntax and how to translate that for a standard algebraic
+calculator. While less fundamental than the former, the latter skill is yet
+critical because students often use their calculators as a means to verify their
+intuition, and any mistranslation can easily lead them astray. The
+oft-encountered algebra student insisting that the square of $-1$ is $-1$
+attests to this fact.
+
+This paper proposes an interactive system that would aid both areas of
+instruction by allowing students to work out algebra problems naturally in any
+desired syntax, providing feedback when a step has resulted in an unequal
+expression. The system will accept input from any front-end that can parse math
+expressions into some specified markup (e.g.\ MathML), display the expression
+back to the reader in something human-readable (e.g.\ compiled \TeX), and on
+subsequent iterations of use will inform the user if the next expression is
+equivalent to the last. This proposal also includes two reference front-ends,
+one for handwritten math expressions and one for a keyboard-oriented syntax.
+
+\section{Requirements}
+
+A complete system consists of a common back-end providing an API to one of a
+number of front-ends differing on the way they accept input.
+
+\subsection{Functional Requirements}
+
+\begin{enumerate}
+\item Back-end
+  \begin{enumerate}
+  \item Accept two mathematics expressions and return whether they are
+    equivalent.
+  \end{enumerate}
+\item Front-end (Common)
+  \begin{enumerate}
+  \item Parse mathematics expressions into some computer-readable format.
+  \item Display to the user the parsed expressions in a human-readable format.
+  \item Display to the user if two subsequent expressions are inequivalent.
+  \end{enumerate}
+\item Front-end (Keyboard-oriented syntax)
+  \begin{enumerate}
+  \item Parse keyboard-written math expressions (i.e. like WolframAlpha syntax)
+    into some computer-readable format
+  \end{enumerate}
+\item Front-end (Handwritten syntax)
+  \begin{enumerate}
+  \item Parse handwritten math expressions into some computer-readable format.
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Performance Requirements}
+
+Feedback to the user should be  less than 1 second for algebraic expressions of
+up to 3 variables.
+
+\subsection{Cost}
+
+Any reasonable desktop computer (say 1000 USD) should be capable of running the
+system.
+
+\section{Implementation}
+
+The back-end will be implemented to run on standard hardware. The front-ends
+described will be implemented to run in a browser, but the proposal's
+requirements give no reason such that one could not run natively.
+
+\section{Project Plan}
+
+Given the time left in the semester, I plan two weeks of 10 hours for the
+front-end and 3 weeks of 10 hours for the front-ends.
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -1,0 +1,6 @@
+[submodule "cat/seshat"]
+	path = cat/seshat
+	url = https://github.com/falvaro/seshat
+[submodule "cat/elm-platform"]
+	path = cat/elm-platform
+	url = git@github.com:elm-lang/elm-platform.git

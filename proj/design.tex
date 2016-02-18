@@ -1,0 +1,64 @@
+\documentclass{abrice}
+
+\title{Comp 549: Project Design}
+\author{Anthony Brice}
+\date{\today\protect\\ \bigskip The Computer Algebra Tutor}
+\setcounter{secnumdepth}{2}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+This document describes the design and implementation of the a Computer Algebra
+Tutor for use by high school- and college-age students. It references the
+proposal document written at the outset of project development.
+
+\section{System Design}
+
+Informed by my research, it was important to me that the system minimize the
+negative affects among users. I had to make clear to the user when mistake was
+made, but I tried to be careful about not overstating the error. This also
+informed my decision about whether a student should be able to continue a
+problem after an error, equating subsequent expressions with the erroneous
+one. I chose to disallow this since as proposed the primary goal of the project
+was to reinforce algebraic concepts.
+
+\section{Hardware/Software Design}
+
+To facilitate the implementation and ease of deployment, I decided to develop
+the project as a client/server application with the front-end running in a
+standard web browser. This allowed me to develop a front-end that can run on
+desktop or mobile devices with the same set of code. I would have liked the
+backend to run on any device as well to keep the application discrete, but that
+would require porting Seshat, the program that takes hand-drawn input and
+converts it to \TeX, to various devices and accessing it as a library rather than
+a binary as its designer intended.
+
+The front-end was implemented in standard HTML5/CSS/ECMAScript with jQuery and
+Bootstrap to ensure proper sizing of text and links across devices. I considered
+Fitts's law when designing my inputs, but since the main mode of interaction on
+mobile uses no pointer device and is not fullscreen on desktop, the law seemed
+inapplicable. I ran into much trouble trying to resize the area for hand-drawn
+input (the canvas) for smaller devices. The libraries I used were hardcoded for
+an area of specific pixel width and height, and changing the dimensions caused
+input to map improperly. I chose to present the canvas at the bottom of the page
+with parsed TeX appearing directly above it so that the output would match how
+students tend to attack math problems, a complex expression with subsequent
+simplifications appearing below it.
+
+The backend was implemented as a simple Node.js server hosting the front-end and
+providing an API for parsing sketches with Seshat and for equating expressions
+with the Wolfram Alpha API. Believing one to exist, I intended to use a MathML
+parser for equating expressions. This proved not to be the case and implementing
+one in the time allotted proved beyond my abilities. That said, the Wolfram
+Alpha API proved very capable, but my use is unfortunately limited to 2000 calls
+a month.
+
+
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

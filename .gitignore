@@ -159,3 +159,12 @@ sympy-plots-for-*.tex/
 
 # PDFs
 *.pdf
+
+cat.zip
+cat/Config/*
+
+**/node_modules/*
+**/public/*
+**/seshat-exec/*
+**/seshat/*
+**/tmp/*

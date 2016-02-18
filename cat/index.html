@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer Algebra Tutor</title>
+  <script async src="MathJax/MathJax.js?config=TeX-MML-AM_HTMLorMML-full.js"></script>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+   #drawing-canvas {
+     position: relative;
+     z-index: 2;
+     border: 1px solid #000;
+   }
+
+   #delete {
+     float: right;
+     display: none;
+     z-index: 1;
+   }
+  </style>
+</head>
+<body>
+  <h1 class="text-center" >Computer Algebra Tutor</h1>
+  <br>
+  <div class="container">
+    <span>
+    <a id="delete" class="btn fl delete" href="#">&#x2717</a>
+    </span>
+    <div id="div-canvas" class="text-center">
+      <canvas id="drawing-canvas" height="200" width="400"></canvas>
+      <div class="controls">
+        <a id="clear" class="btn fl" href="#">clear</a>
+        <a id="send" class="btn fl" href="#">send</a>
+        <a id="undo" class="btn fl" href="#">undo</a>
+        <a id="redo" class="btn fl" href="#">redo</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/jsketch.min.js"></script>
+  <script src="js/jquery.sketchable.min.js"></script>
+  <script src="js/jquery.sketchable.memento.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
